@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
 
-  http_basic_authenticate_with name: "adi", password: "adi", except: [:index, :show]
+  http_basic_authenticate_with name: "adi", password: "adi", except: [:index]
 
 	def index
 		@articles = Article.all
