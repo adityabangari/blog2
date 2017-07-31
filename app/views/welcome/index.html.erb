@@ -4,12 +4,44 @@
 
 <!DOCTYPE html>
 <html>
+
+<head>
+  <style>
+  .row {
+    box-sizing: border-box;
+    padding-left: 10px;
+  }
+
+  
+  .col1, .col2, .col3 {
+    left: 5px;
+    border: 2px solid black;
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 5px;
+    width: 24%;
+  }
+  
+  #bdy {
+    border-width: 0px;
+    padding: 0px;
+    margin: 0px;
+    font-size: 90%;
+    background-color: #e7e7de
+}
+</style>  
+</head>
+
+
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+
+
+
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <style>
@@ -70,15 +102,30 @@ and is wrapped around the whole page content, except for the footer in this exam
 
   <!-- Blog entry -->
   <div class="w3-card-4 w3-margin w3-white">
-  <img src="/w3images/bridge.jpg" alt="Norway" style="width:100%">
+  
     <div class="w3-container">
       <h3><b>BLOG ENTRY</b></h3>
-      <h5>Title description, <span class="w3-opacity">April 2, 2014</span></h5>
+      <h5>Six must have accesories this monsoon <span class="w3-opacity">April 2, 2014</span></h5>
     </div>
 
     <div class="w3-container">
-      <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed
-        tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+        <div>
+     <%= image_tag("monsoon.jpg", :alt => "rss feed" , size: "759x432") %>
+
+   </div>
+      <p>* Raincoats: Raincourts are definitely making a come-back this season, with new patterns, colours and material to suit your style. From a balloon raincoat or rain poncho to a transparent one, a quick Google search can find you your perfect match!<br><br>
+
+* Shoes: Hate getting wet? Jelly flats, funky flip flops or bright and shiny gumboots can be your best friends this season.<br><br>
+
+* Bags: Try picking up a nylon or plastic tote bag to keep all your possessions safe and dry during the rains.<br><br>
+
+* Umbrellas: Yeah, we all have umbrellas, but do you have a stylist one? Get rid of those boring black ones and pick up a bright, colourful one, preferably with a beautiful design.<br><br>
+
+* Waterproof phone covers: An essential item today, phone covers can spruce up your style quotient and protect your phone from the rain.<br><br>
+
+* Scarves: Scarves are a fashion accessory that not only completes your outfit but also comes in handy during the rains. Lovely prints in a myriad colours and in different fabrics like cotton, mulmul and chiffon are easily accessible this season.<br><br>
+
+(Source: IANS)</p>
       <div class="w3-row">
         <div class="w3-col m8 s12">
           <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
@@ -119,18 +166,18 @@ and is wrapped around the whole page content, except for the footer in this exam
       </li>
       <li class="w3-padding-16">
        <%= image_tag("travel.jpg", :alt => "rss feed" , size: "80x80" ) %>
-        <span class="w3-large">Ipsum</span><br>
-        <span>Praes tinci sed</span>
+        <span class="w3-large">Wanderlust</span><br>
+        <span>Love for travel</span>
       </li> 
       <li class="w3-padding-16">
-        <%= image_tag("momo.jpg", :alt => "rss feed" , size: "80x80" ) %>
-        <span class="w3-large">Dorum</span><br>
-        <span>Ultricies congue</span>
+        <%= image_tag("dragon.jpg", :alt => "rss feed" , size: "80x80" ) %>
+        <span class="w3-large">Games of Thrones</span><br>
+        <span>Season 7 Coming Soon!!</span>
       </li>   
       <li class="w3-padding-16 w3-hide-medium w3-hide-small">
-        <%= image_tag("momo.jpg", :alt => "rss feed" , size: "80x80" ) %>
-        <span class="w3-large">Mingsum</span><br>
-        <span>Lorem ipsum dipsum</span>
+        <%= image_tag("img2.jpg", :alt => "rss feed" , size: "80x80" ) %>
+        <span class="w3-large">Fashion Trending</span><br>
+        <span>Casual Shirts and Denims</span>
       </li>  
     </ul>
   </div>
@@ -142,8 +189,8 @@ and is wrapped around the whole page content, except for the footer in this exam
       <h4>Tags</h4>
     </div>
     <div class="w3-container w3-white">
-    <p><span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">London</span>
-      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">DIY</span>
+    <p><span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">New Delhi</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Gurgaon</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Pantloons</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Noida</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">DIY</span>
       <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Family</span>
       <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Shopping</span>
       <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Games</span>
@@ -160,11 +207,13 @@ and is wrapped around the whole page content, except for the footer in this exam
 <!-- END w3-content -->
 </div>
 
+
+
 <!-- Footer -->
 <footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
   <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
   <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  <p>   <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">  </a></p>
 </footer>
 
 </body>
@@ -174,5 +223,160 @@ $("#card").flip({
   axis: 'y',
   trigger: 'hover'
 });
+
+$("#c1").flip({
+  axis: 'y',
+  trigger: 'hover'
+});
+
+
 </script>
+
+
+
+
+
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        // set up hover panels
+        // although this can be done without JavaScript, we've attached these events
+        // because it causes the hover to be triggered when the element is tapped on a touch device
+        $('.hover').hover(function(){
+          $(this).addClass('flip');
+        },function(){
+          $(this).removeClass('flip');
+        });
+      });
+    </script>
+  <style>
+    .panel {
+      margin: 0 auto;
+      width: 130px;
+      height: 130px;  
+      position: relative;
+      font-size: .8em;
+      -webkit-perspective: 600px;
+      -moz-perspective: 600px;
+    }
+    /* -- make sure to declare a default for every property that you want animated -- */
+    /* -- general styles, including Y axis rotation -- */
+    .panel .front {
+      position: absolute;
+      top: 0;
+      z-index: 900;
+      width: inherit;
+      height: inherit;
+      text-align: center;
+      -webkit-transform: rotateX(0deg) rotateY(0deg);
+      -webkit-transform-style: preserve-3d;
+      -webkit-backface-visibility: hidden;
+      -moz-transform: rotateX(0deg) rotateY(0deg);
+      -moz-transform-style: preserve-3d;
+      -moz-backface-visibility: hidden;
+      /* -- transition is the magic sauce for animation -- */
+      -o-transition: all .4s ease-in-out;
+      -ms-transition: all .4s ease-in-out;
+      -moz-transition: all .4s ease-in-out;
+      -webkit-transition: all .4s ease-in-out;
+      transition: all .4s ease-in-out;
+    }
+    .panel.flip .front {
+      z-index: 900;
+      -webkit-transform: rotateY(180deg);
+      -moz-transform: rotateY(180deg);
+    }
+    .panel .back {
+      position: absolute;
+      top: 0;
+      z-index: 800;
+      width: inherit;
+      height: inherit;
+      -webkit-transform: rotateY(-180deg);
+      -webkit-transform-style: preserve-3d;
+      -webkit-backface-visibility: hidden;
+
+      -moz-transform: rotateY(-180deg);
+      -moz-transform-style: preserve-3d;
+      -moz-backface-visibility: hidden;
+      /* -- transition is the magic sauce for animation -- */
+      -o-transition: all .4s ease-in-out;
+      -ms-transition: all .4s ease-in-out;
+      -moz-transition: all .4s ease-in-out;
+      -webkit-transition: all .4s ease-in-out;
+      transition: all .4s ease-in-out;
+    }
+    .panel.flip .back {
+      z-index: 1000;
+      -webkit-transform: rotateX(0deg) rotateY(0deg);
+      -moz-transform: rotateX(0deg) rotateY(0deg);
+
+
+      body {
+  margin: 0;
+  padding: 0;
+}
+#di {
+  height: 25vw;
+  width: 25vw;
+  background: tomato;
+  display: inline-block;
+  text-align: center;
+  line-height: 25vw;
+  font-size: 20vw;
+  margin-right: -4px;
+  position: relative;
+}
+/*demo only*/
+
+div:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: inherit;
+  width: inherit;
+  background: rgba(200, 200, 200, 0.6);
+  transition: all 0.4s;
+}
+div:hover:before {
+  background: rgba(200, 200, 200, 0);
+}
+    }
+  </style>
+</head>
+<body>
+  <div class="hover panel">
+    <div class="front">
+      <div class="pad">
+        <img src="http://simonlockyer.info/wp-content/themes/DOD_BLANK/images/logo-front.png" alt="logo front" />
+      </div>
+    </div>
+    <div class="back">
+      <div class="pad">
+        <img src="http://simonlockyer.info/wp-content/themes/DOD_BLANK/images/logo-back.png" alt="logo back" />
+      </div>
+    </div>
+  </div>
+
+<div id="di">1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+<div>5</div>
+<div>6</div>
+<div>7</div>
+<div>8</div>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
