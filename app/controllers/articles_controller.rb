@@ -1,5 +1,7 @@
 class ArticlesController < ApplicationController
 
+  http_basic_authenticate_with name: "adi", password: "adi", except: [:index]
+
 	def index
 		@articles = Article.all
 	end
@@ -17,8 +19,6 @@ class ArticlesController < ApplicationController
 	def create
 		#render plain: params[:article].inspect
 		@article = Article.new(article_params)
-
-     
 		if(@article.save)
 			redirect_to @article
 		else
