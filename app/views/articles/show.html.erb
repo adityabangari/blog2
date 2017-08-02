@@ -1,22 +1,24 @@
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
+<div class="w3-card-4 w3-margin w3-white">
+        <p>
+          <strong>Title:</strong>
+          <%= @article.title %>
+        </p>
 
-<p>
-  <strong>Text:</strong>
-  <%= @article.text %>
-</p>
+        <p>
+          <strong>Text:</strong>
+          <%= @article.text %>
+        </p>
+  <div class="w3-container w3-card-4 w3-blue-grey w3-margin-top w3-padding ">
+    <div class="w3-panel w3-leftbar w3-border-blue w3-pale-blue">
+        <h2> Comments: </h2>
+        <%= render @article.comments %>
 
-<h2> Comments: </h2>
-<%= render @article.comments %>
-
- <h2> Add a comment </h2>
-<%= render 'comments/form' %>
-
+         <h2> Add a comment </h2>
+        <%= render 'comments/form' %>
+    </div>
+  </div>
 
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %> 
-
- 
+        <%= link_to 'Edit', edit_article_path(@article) %> |
+        <%= link_to 'Back', articles_path %>
+</div>
