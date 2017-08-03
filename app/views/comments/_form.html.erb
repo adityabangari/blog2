@@ -1,7 +1,8 @@
-<div class="w3-panel  w3-border-blue w3-gray">
+<div class="w3-container w3-card-4 w3-gray w3-margin ">
 
 <%= form_for([@article, @article.comments.build]) do |f| %>
-  <p>
+  <div class="w3-margin-left w3-margin-bottom">
+      <p>
     <%= f.label :commenter %><br>
     <%= f.text_field :commenter %>
   </p>
@@ -13,4 +14,5 @@
     <%= f.submit %>
   </p>
 <% end %>
+  </div>
 </div>
