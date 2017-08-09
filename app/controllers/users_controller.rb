@@ -23,6 +23,6 @@ class UsersController < ApplicationController
     params.require(:user).permit(:username, :email, :password, :password_confirmation)
   end
 
-
+   before_action :save_login_state, :only => [:new, :create]
 
 end
