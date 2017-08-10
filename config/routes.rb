@@ -23,7 +23,7 @@ post '/users', to: 'users#create'
 get 'login', :to => 'sessions#login'
 get 'signup', :to => 'users#new'
 get 'login', :to => 'sessions#login'
-get 'logout', :to => 'sessions#logout'
+post 'logout', :to => 'sessions#logout'
 get 'home', :to => 'sessions#home'
 get 'profile', :to => 'sessions#profile'
 post 'login' , :to => 'sessions#login_attempt'
@@ -37,6 +37,8 @@ post 'login' , :to => 'sessions#login_attempt'
 
 # resources :sessions
  
- root 'welcome#index'
+ root 'welcome#home'
+
+get 'welcomeshow', :to => 'welcome#show'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

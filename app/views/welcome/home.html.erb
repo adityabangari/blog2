@@ -1,0 +1,78 @@
+<html>
+
+
+
+
+
+<h1>Homepage</h1>
+<%= link_to 'Login', login_path %>
+<%= link_to 'SignUp', signup_path %>
+<br>
+<br>
+<!--<table>-->
+<!--<tr>-->
+<!--<th>Title</th>-->
+<!--<th>Text</th>-->
+<!--</tr>-->
+<!-- Blog entry -->
+<% @articles.each do |article| %>
+
+    <div class="w3-card-4 w3-margin w3-white">
+
+      <div class="w3-container">
+        <h3><b>BLOG ENTRY</b></h3>
+        <h5>Title:<%= article.title %> <br> Updated at:<span class="w3-opacity"><%= article.updated_at.strftime("%d-%m-%Y ") %></span></h5>
+      </div>
+
+      <div class="w3-container">
+
+        <p>
+          Text: <%= truncate(article.text, :length => 100) %>
+        </p>
+
+
+
+        <div class="w3-row">
+          <div class="w3-col m8 s12">
+            <!--show button-->
+            <p><%= button_to 'Read More', welcomeshow_path(article), :method => :get , :id => "myButton" %></p>
+
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+    </div>
+    </div>
+
+<% end %>
+
+
+<!---->
+<!--<tr>-->
+<!--<td><%#= article.title %></td>-->
+<!--<td><%#= article.text %></td>-->
+<!--<td></td>-->
+<!--<%#= button_to "New Post", { :action => "new" }, :method => :get %>-->
+
+<!--<td><%#= link_to 'Edit', edit_article_path(article) %></td>-->
+<%#= link_to 'Destroy', article_path(article),
+#               method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+<!--</tr>-->
+
+<!--</table>-->
+
+
+
+
+
+<%#= button_to 'Show', article_path(article), :method => :get , :id => "myButton" %>
+
+
+
+</html>

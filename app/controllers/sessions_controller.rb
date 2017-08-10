@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   def login
-    #login form
+    # login form
   end
 
   def login_attempt
@@ -10,9 +10,10 @@ class SessionsController < ApplicationController
 if authorized_user
   session[:user_id] = authorized_user.id
   flash[:notice]="Welcome #{authorized_user.username}"
-  redirect_to(:action => 'home')
+  redirect_to url_for(:controller => :articles, :action => :index)
 else
-  flash[:notice]="invalid user"
+
+  flash[:notice]="invalid username or password"
   flash[:color]="Invalid"
   render "login"
 
@@ -35,9 +36,12 @@ end
   end
 
 
+
+
+
   def logout
     session[:user_id] = nil
-    redirect_to :action => 'login'
+    redirect_to root_path
   end
 
    before_action :authenticate_user, :only => [:home, :profile, :setting]

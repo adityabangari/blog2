@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     flash[:notice] = "Form is invalid"
     flash[:color] = "Invalid"
   end
-    render "new"
+  redirect_to root_path
   end
 
 
