@@ -41,6 +41,7 @@ class ArticlesController < ApplicationController
 
 	def show
 		@article=Article.find(params[:id])
+		@reply = Reply.new
 	end
 
 
@@ -58,5 +59,6 @@ class ArticlesController < ApplicationController
     		params.require(:article).permit(:title, :text)
   		end
 
-
+	before_action :authenticate_user ,:only => [:index, :new, :show, :edit, :create, :update, :destroy]
+  before_action :save_login_state, :only => [:login, :login_attempt]
 end

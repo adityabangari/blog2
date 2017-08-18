@@ -1,0 +1,10 @@
+<div>
+  <%= form_for @reply, url: new_reply_path do |r|%>
+      <%= r.label :reply %><br>
+      <%= r.text_field :reply %>
+      <%= byebug %>
+      <%= r.hidden_field :comment_id, :value => cmnt_id %>
+      <%= r.submit%>
+  <% end %>
+
+</div>

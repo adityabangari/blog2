@@ -16,6 +16,10 @@ resources :articles do
  resources :comments
 end
 
+resources :reply
+post '/reply/new', to: 'reply#create'
+
+
 post '/users', to: 'users#create'
 
  # get '/users/new', to: 'users#new'

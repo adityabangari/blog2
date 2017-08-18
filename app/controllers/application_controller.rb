@@ -20,4 +20,8 @@ class ApplicationController < ActionController::Base
       return true
     end
   end
+
+
+  before_action :save_login_state, :only => [:login, :login_attempt]
+
 end
